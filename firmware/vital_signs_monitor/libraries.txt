@@ -1,0 +1,26 @@
+# Required Libraries — AIoMT-HypoGuard
+
+Install these via the Arduino IDE Library Manager
+(Sketch → Include Library → Manage Libraries...) unless noted otherwise.
+
+## Board Support
+- **ESP32 by Espressif Systems** (Boards Manager, not Library Manager)
+  Add this URL under File → Preferences → Additional Board Manager URLs:
+  https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+  Tested with core version: 2.0.x
+
+## Libraries
+
+| Library | Purpose | Install source | Tested version |
+|---|---|---|---|
+| **Wire** | I2C communication | Built-in (ESP32 core) | — |
+| **WiFi** | WiFi connectivity | Built-in (ESP32 core) | — |
+| **ThingSpeak** | Send data to ThingSpeak cloud | Library Manager — search "ThingSpeak" (by MathWorks) | 2.1.x |
+| **SparkFun MAX3010x Pulse and Proximity Sensor Library** | Provides `MAX30105.h`, `heartRate.h`, `spo2_algorithm.h` for the MAX30102 sensor | Library Manager — search "SparkFun MAX3010x" | 1.1.x |
+| **ClosedCube MAX30205** | Driver for the MAX30205 digital temperature sensor | Library Manager — search "ClosedCube MAX30205" | 1.0.x |
+
+## Notes
+
+- The MAX30102 driver in this project (`MAX30105.h`) is part of the **SparkFun MAX3010x** library — despite the MAX30105/MAX30102 name difference, it's the correct and commonly used driver for the MAX30102 as well.
+- `heartRate.h` and `spo2_algorithm.h` are bundled inside the same SparkFun library — installing it once pulls in all three headers.
+- Exact version numbers weren't pinned during development; if you hit a compile error, try installing the latest stable release of each library first.

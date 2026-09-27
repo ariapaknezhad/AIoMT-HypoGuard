@@ -1,0 +1,51 @@
+# =====================================================================
+# This file merges the community-standard "Arduino" .gitignore template
+# (as served by https://www.toptal.com/developers/gitignore — the same
+# generator behind gitignore.io) with rules specific to this project.
+#
+# To regenerate/extend the base template yourself, run:
+#   curl -L -o .gitignore "https://www.toptal.com/developers/gitignore/api/arduino,visualstudiocode"
+# then re-add the "Project-specific" section at the bottom.
+# =====================================================================
+
+### Arduino ###
+# Compiled output
+*.hex
+*.elf
+*.bin
+*.eep
+*.map
+
+# Arduino build/cache folders
+build/
+.pio/
+.pioenvs/
+.piolibdeps/
+.vscode/.browse.c_cpp.db*
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/ipch
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+*.code-workspace
+
+### macOS ###
+.DS_Store
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# =====================================================================
+# Project-specific — AIoMT-HypoGuard
+# =====================================================================
+
+# Real WiFi/ThingSpeak credentials — NEVER commit this file.
+# Copy firmware/vital_signs_monitor/config.example.h to config.h and
+# fill in your own values; config.h stays local only.
+config.h
